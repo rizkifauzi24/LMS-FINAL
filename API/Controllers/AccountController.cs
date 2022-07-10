@@ -69,19 +69,19 @@ namespace API.Controllers
 
             if (result == -1)
             {
-                return StatusCode(400, new { status = HttpStatusCode.BadRequest, Message = "Email Salah!" });
+                return StatusCode(400, new { status = 401, Message = "Email Salah!" });
             }
             else if (result == -2)
             {
-                return StatusCode(400, new { status = HttpStatusCode.BadRequest, Message = "OTP Telah Aktif" });
+                return StatusCode(400, new { status = 402, Message = "OTP Telah Aktif" });
             }
             else if (result == -3)
             {
-                return StatusCode(400, new { status = HttpStatusCode.BadRequest, Message = "Kode OTP Telah Kadaluarsa" });
+                return StatusCode(400, new { status = 403, Message = "Kode OTP Telah Kadaluarsa" });
             }
             else if (result == -4)
             {
-                return StatusCode(400, new { status = HttpStatusCode.BadRequest, Message = "Kode OTP Salah!" });
+                return StatusCode(400, new { status = 404, Message = "Kode OTP Salah!" });
             }
             else if (result > 0)
             {
@@ -89,7 +89,7 @@ namespace API.Controllers
             }
             else
             {
-                return StatusCode(400, new { status = HttpStatusCode.BadRequest, Message = "Password Gagal Di Ganti" });
+                return StatusCode(400, new { status = 405, Message = "Password Gagal Di Ganti" });
             }
         }
     }

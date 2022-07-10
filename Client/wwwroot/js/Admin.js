@@ -137,18 +137,39 @@ $("#changePassword").submit(function (e) {
                     text: 'Email Sent Succesfully',
                 })
                 break;
-            case 404:
+            case 401:
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
                     text: 'Email Inccorect',
                 })
                 break;
-            case 400:
+            case 402:
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Password Inccorect',
+                    text: 'OTP has been activated',
+                })
+                break;
+            case 403:
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'OTP has expired',
+                })
+                break;
+            case 404:
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Wrong OTP code',
+                })
+                break;
+            case 405:
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Password failed to change',
                 })
                 break;
             default:
@@ -161,7 +182,11 @@ $("#changePassword").submit(function (e) {
         }
 
     }).fail((error) => {
-
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Password has not been filled',
+        })
         console.log(error);
     })
 

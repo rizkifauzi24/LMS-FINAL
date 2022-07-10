@@ -523,11 +523,11 @@ $.ajax({
     $.each(result, function (key, val) {
         var namatopic = val.name;
         var change = namatopic.replace(/\s/g, '');
-        text += `<li><a href="#" data-filter=".${change}" id="${change}" >${val.name}</a></li>`;
+        text += `<li><a href=" " data-filter=".${change}" id="${change}" >${val.name}</a></li>`;
 
     });
     console.log(text);
-    var gabung = `<li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>` + text
+    var gabung = `<li class="activeFilter"><a href=" " data-filter="*">Show All</a></li>` + text
     $("#menuIndra").html(gabung);
 
 }).fail((error) => {

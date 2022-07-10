@@ -136,7 +136,22 @@ namespace API.Repository.Data
             //client.Send("from@example.com", loginVM.Email, "Kode OTP", "Kode OTP anda adalah : " + getOTP(loginVM));
             MailMessage message = new MailMessage("test666@gmail.com", forgotVM.Email);
             message.Subject = "Test OTP";
-            message.Body = "<p>Nomor OTP anda adalah <b>" + otp +"</b>, berlaku selama 5 menit :)<p>";
+            message.Body = "<div style='font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2'>"+
+                              "<div style='margin:50px auto;width:70%;padding:20px 0'>"+
+                                "<div style='border-bottom:1px solid #eee'>"+
+                                    "<a href='' style='font-size:1.4em;color:#00466a;text-decoration:none;font-weight:600'> Yudhanih </a>"+
+                                "</div>"+
+                                "<p style='font-size:1.1em'> Hi,</p>"+
+                                "<p> Thank you for using Yudhanih. Use the following OTP to complete the Forgot Your Password procedure. The OTP is valid for 5 minutes </p>" +
+                                "<h2 style='background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;'> "+otp+" </h2>"+
+                                "<p style='font-size:0.9em;'> Regards,<br/> Yudhanih </p>"+
+                                "<hr style='border:none;border-top:1px solid #eee' />"+
+                                "<div style='float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300'>"+
+                                    "<p> Yudhanih Inc</p>"+
+                                    "<p> Indonesia </p>"+
+                                "</div>"+
+                               "</div>" +
+                            "</div>";
             message.IsBodyHtml = true;
             client.Send(message);
         }
