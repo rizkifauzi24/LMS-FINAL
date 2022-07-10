@@ -134,8 +134,8 @@ namespace API.Repository.Data
                 EnableSsl = true
             };
             //client.Send("from@example.com", loginVM.Email, "Kode OTP", "Kode OTP anda adalah : " + getOTP(loginVM));
-            MailMessage message = new MailMessage("test666@gmail.com", forgotVM.Email);
-            message.Subject = "Test OTP";
+            MailMessage message = new MailMessage("yudhanih@gmail.com", forgotVM.Email);
+            message.Subject = "Your OTP";
             message.Body = "<div style='font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2'>"+
                               "<div style='margin:50px auto;width:70%;padding:20px 0'>"+
                                 "<div style='border-bottom:1px solid #eee'>"+
