@@ -281,6 +281,47 @@ $.ajax({
     console.log(totalTr)
     $("#TotalTr").html(totalTr);
 })
+
+
+
+/*Total Transaksi Accept*/
+$.ajax({
+    url: "https://localhost:44306/API/Transaction",
+}).done((result) => {
+    console.log(result)
+
+
+    let item = result.filter(g => g.status === 0);
+    let totalTr = item.length;
+    console.log(totalTr)
+    $("#TotalTrACC").html(totalTr);
+})
+
+
+
+/*Total Transaksi Decline*/
+$.ajax({
+    url: "https://localhost:44306/API/Transaction",
+}).done((result) => {
+    console.log(result)
+
+
+    let item = result.filter(g => g.status === 1);
+    let totalTr = item.length;
+    console.log(totalTr)
+    $("#TotalTrDEC").html(totalTr);
+})
+
+
+
+
+
+
+
+
+
+
+
 //DONUT Chart GENDER
 $.ajax({
     url: "https://localhost:44306/API/User",

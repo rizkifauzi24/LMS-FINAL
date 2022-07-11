@@ -28,7 +28,7 @@
             </div>
             <!-- Card stats -->
             <div class="row">
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-6 col-md-6">
                     <a href="~/Admin/UserData">
                         <div class="card card-stats">
                             <!-- Card body Total Users -->
@@ -49,7 +49,9 @@
                     </a>
                 </div>
 
-                <div class="col-xl-4 col-md-6">
+
+                
+                <div class="col-xl-6 col-md-6">
                     <a href="~/Admin/CourseData">
                         <div class="card card-stats">
                             <!-- Card body Total Courses-->
@@ -69,8 +71,13 @@
                         </div>
                     </a>
                 </div>
+               
+            </div>
+
+
+            <div class="row">
                 <div class="col-xl-4 col-md-6">
-                    <a href="~/Admin/TransactionData">
+                    <a>
                         <div class="card card-stats">
                             <!-- Card body Total Transactions -->
                             <div class="card-body">
@@ -89,6 +96,48 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <a href="~/Admin/TransactionAccept">
+                        <div class="card card-stats">
+                            <!-- Card body Total Transactions -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Transactions Accept</h5>
+                                        <span class="h2 font-weight-bold mb-0" id="TotalTrACC"></span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-success text-white rounded-circle shadow">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <a href="~/Admin/TransactionDecline">
+                        <div class="card card-stats">
+                            <!-- Card body Total Transactions -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Transactions Decline</h5>
+                                        <span class="h2 font-weight-bold mb-0" id="TotalTrDEC"></span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-success text-white rounded-circle shadow">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -130,21 +179,8 @@
 
 <div class="container-fluid" style="margin-top:50px;">
     <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
-                    <h1 class="mb-0">Waiting Approval !</h1>
-                </div>
-                <div class="card-body">
+     
 
-
-                    @*ISI DATATABLE TRANSACTION YANG STATUSNYA WAITING*@
-
-
-                </div>
-
-            </div>
-        </div>
     </div>
 </div>
 
